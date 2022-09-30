@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MesssagingCenter.Views.SampleAppPage">
+    <ContentPage.Content>
+        <StackLayout>
+          
+            <ListView x:Name="colors" ItemsSource="{Binding ColorsList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding ColorName}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+            <Button Command="{Binding GoToColorsCommand}"
+           Text="Add More Colors"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
